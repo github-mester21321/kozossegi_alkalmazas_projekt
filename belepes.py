@@ -23,13 +23,20 @@ def belepesAblak():
 
         # print(felhasznalo_jelszava, felhasznalo_neve)
 
+        nincs = True
         with open('./felhasznalo_jelszo_kombinacio.txt', 'r', encoding="utf-8") as file:
-            for adat in file:
-                data = adat.split(';')
+            for i in file:
+                i = i.split(';')
+                x = i[1].replace("\n", "")
+                data = [i[0], x]
+                print(data)
                 if data[0] == felhasznalo_neve and data[1] == felhasznalo_jelszava:
-                    print("SZIA")
-                else:
-                    root.after(2000, lambda:root.destroy())
+                    koszontes = Label(root, text="Üdvözöllek")
+                    koszontes.place(relx=0.5, rely=0.4, anchor=CENTER)
+                    nincs = False
+                
+            if nincs == True:   
+                root.after(2000, lambda:root.destroy())
             
 
 
@@ -37,5 +44,6 @@ def belepesAblak():
 
 
     root.mainloop()
+
 
 belepesAblak()
