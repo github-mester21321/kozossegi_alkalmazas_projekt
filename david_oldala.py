@@ -1,38 +1,38 @@
-# from tkinter import *
-# from tkinter import ttk
-# # from PIL import Image, ImageTk
-# import valasztas
+from tkinter import *
 
-# def fofuggveny():
-#     root = Tk()
-#     root.title("döntés")
-#     root.geometry("400x350")
-#     # root.configure(bg='#6a6664')
+root = Tk()
+root.title("Dávid oldali chat")
+root.geometry("500x500")
+root.configure(bg="#257180")
+
+szovegmezo = Entry(root, borderwidth=2)
+szovegmezo.place(relx=0.5, rely=0.1, anchor=CENTER)
+
+def fofuggveny():
+    szoveg = str(szovegmezo.get())
+    if szoveg != "":    
+        with open('./messages.txt', 'a', encoding='utf-8') as irogatas:
+            print(80, szoveg, sep=";", file=irogatas)
+
     
- 
- 
-#     # Read the Image
-#     image = Image.open("bmw.jpg")
- 
-#     # Resize the image using resize() method
-#     resize_image = image.resize((300, 180))
- 
-#     img = ImageTk.PhotoImage(resize_image)
     
-#     # create label and add resize image
-#     kepLabel = Label(image=img)
-#     kepLabel.image = img
-#     kepLabel.place(relx=0.5, rely=0.6, anchor=CENTER)
- 
- 
-#     def chatMegnyitas():
-#         valasztas.foChat()
-#         # root.destroy()
-        
-    
-#     chat_gomb = Button(root, text="CHAT", command=chatMegnyitas, font='Rubik 10 bold').place(relx=0.5, rely=0.1, anchor=CENTER)
+    with open('./messages.txt', 'r', encoding='utf-8') as uzenetek:
+        if len(uzenetek.readlines()) == 0:
+            print("Még nem érkezett üzenete.")
+        else:
+            for i in uzenetek:
+                i.strip()
+                i = i.split(';')
+                i = [int(i[0]), str(i[1])]
+                #patrik=420, david=80
+                
 
 
-#     root.mainloop()
     
-# fofuggveny()
+
+    root.mainloop()
+
+
+bekero_gomb = Button(root, text="Küldés", font="Rubik 10 bold", command=fofuggveny).place(relx=0.5, rely=0.8, anchor=CENTER)
+
+fofuggveny()

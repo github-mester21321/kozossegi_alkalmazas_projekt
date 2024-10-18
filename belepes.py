@@ -16,7 +16,7 @@ def belepesAblak():
     felhasznalonev.place(relx=0.75, rely=0.06, anchor=CENTER)
 
     masodik_szoveg = Label(root, text="Jelszó: ", font="rubik 10 bold").place(relx=0.25, rely=0.15, anchor=CENTER)
-    jelszo = Entry(root, borderwidth=2)
+    jelszo = Entry(root, borderwidth=2, show="*")
     jelszo.place(relx=0.75, rely=0.15, anchor=CENTER)
 
 
