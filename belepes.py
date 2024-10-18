@@ -8,6 +8,7 @@ def belepesAblak():
     root = Tk()
     root.title("Media")
     root.geometry("300x350")
+    # root.attributes('-fullscreen', True)
     root.configure(bg='#6a6664')
 
     elso_szoveg = Label(root, text="Felhasználónév: ", font="rubik 10 bold").place(relx=0.25, rely=0.06, anchor=CENTER)
@@ -38,13 +39,14 @@ def belepesAblak():
                     # time.sleep(0.1)
                     felhasznalonev.delete(0, END)
                     jelszo.delete(0, END)
-                    valasztas.foChat()
+                    valasztas.valasztasAblak()
                     nincs = False
-                
-            if nincs == True:
-                hiba = Label(root, text="Nem jól adtad meg felhasználóneved vagy \n jelszavad vagy még nem regisztráltál.", font='rubik 8 bold')
-                hiba.place(relx=0.5, rely=0.4, anchor=CENTER)
-                root.after(2000, lambda:root.destroy())
+
+            
+        if nincs == True:
+            hiba = Label(root, text="Nem jól adtad meg felhasználóneved vagy \n jelszavad vagy még nem regisztráltál.", font='rubik 8 bold')
+            hiba.place(relx=0.5, rely=0.4, anchor=CENTER)
+            root.after(2000, lambda:root.destroy())
             
 
 

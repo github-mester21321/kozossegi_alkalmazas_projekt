@@ -4,6 +4,7 @@ import regisztracio
 
 root = Tk()
 root.geometry("300x350")
+# root.attributes('-fullscreen', True)
 
 
 def belepesFg():

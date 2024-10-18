@@ -6,6 +6,7 @@ def regisztaciosAblak():
     root = Tk()
     root.title("Media")
     root.geometry("300x350")
+    # root.attributes('-fullscreen', True)
     root.configure(bg='#6a6664')
 
 

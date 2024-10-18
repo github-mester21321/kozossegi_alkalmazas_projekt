@@ -1,38 +1,28 @@
 from tkinter import *
-import chat
+import david_oldala
+import patrik_oldala
 
-def foChat():
+def valasztasAblak():
     root = Tk()
     root.title("Chat")
-    root.geometry("1800x1000")
-    root.attributes('-fullscreen', True)
+    root.geometry("350x300")
+    # root.attributes('-fullscreen', True)
     root.configure(bg='#6a6664')
     
     def bezaras():
         root.destroy()
         
-    
-    def megnyitasChat():
-        # proba = Tk()
-        # proba.title("Chat")
-        # # proba.geometry("1800x1000")
-        # proba.attributes('-fullscreen', True)
-        # proba.configure(bg='black')
-        # proba.mainloop()
-        chat.chatFolyamat()
-        
         
     def david_oldal():
-        print("sdad")
-        
+        david_oldala.fofuggveny()
+
     def patrik_oldal():
-        print("sdad")
+        patrik_oldala.ablak()
     
-    bezaro_gomb = Button(root, text="x", bg="red", command=bezaras).place(relx=0.995, rely=0.01, anchor=CENTER)
-    megnyito_chat = Button(root, text="Chat", bg="green", command=megnyitasChat).place(relx=0.2, rely=0.2, anchor=CENTER)
-    megnyito_david_profil = Button(root, text="Dávid", bg="green", command=david_oldal).place(relx=0.5, rely=0.2, anchor=CENTER)
-    megnyito_patrik_profil = Button(root, text="Patrik", bg="green", command=patrik_oldal).place(relx=0.8, rely=0.2, anchor=CENTER)
+    # bezaro_gomb = Button(root, text="x", bg="red", height=2, width=3, command=bezaras).place(relx=0.995, rely=0.01, anchor=CENTER)
+    megnyito_david_profil = Button(root, text="Dávid", bg="green", height=5, width=10, command=david_oldal).place(relx=0.5, rely=0.2, anchor=CENTER)
+    megnyito_patrik_profil = Button(root, text="Patrik", bg="green", height=5, width=10, command=patrik_oldal).place(relx=0.8, rely=0.2, anchor=CENTER)
     
     root.mainloop()
     
-# foChat()
+valasztasAblak()
