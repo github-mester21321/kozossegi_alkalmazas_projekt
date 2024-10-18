@@ -1,6 +1,8 @@
 #kiegeszitok beimportalasa
 from tkinter import *
 from tkinter import ttk
+import valasztas
+import time
 
 def belepesAblak():
     root = Tk()
@@ -31,11 +33,17 @@ def belepesAblak():
                 data = [i[0], x]
                 print(data)
                 if data[0] == felhasznalo_neve and data[1] == felhasznalo_jelszava:
-                    koszontes = Label(root, text="Üdvözöllek")
+                    koszontes = Label(root, text="Üdvözöllek", font='rubik 12 bold')
                     koszontes.place(relx=0.5, rely=0.4, anchor=CENTER)
+                    # time.sleep(0.1)
+                    felhasznalonev.delete(0, END)
+                    jelszo.delete(0, END)
+                    valasztas.foChat()
                     nincs = False
                 
-            if nincs == True:   
+            if nincs == True:
+                hiba = Label(root, text="Nem jól adtad meg felhasználóneved vagy \n jelszavad vagy még nem regisztráltál.", font='rubik 8 bold')
+                hiba.place(relx=0.5, rely=0.4, anchor=CENTER)
                 root.after(2000, lambda:root.destroy())
             
 
@@ -46,4 +54,4 @@ def belepesAblak():
     root.mainloop()
 
 
-belepesAblak()
+# belepesAblak()
