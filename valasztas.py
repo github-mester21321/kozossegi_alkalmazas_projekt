@@ -25,4 +25,4 @@ def valasztasAblak():
     
     root.mainloop()
     
-valasztasAblak()
+#valasztasAblak()

@@ -3,22 +3,32 @@ from tkinter import *
 from tkinter import ttk
 import valasztas
 import time
+import tkinter.font as tkFont
 
 def belepesAblak():
     root = Tk()
     root.title("Media")
-    root.geometry("300x350")
+    root.geometry("400x300")
     # root.attributes('-fullscreen', True)
     root.configure(bg='#6a6664')
 
-    elso_szoveg = Label(root, text="Felhasználónév: ", font="rubik 10 bold").place(relx=0.25, rely=0.06, anchor=CENTER)
+    elso_szoveg = Label(root, text="Felhasználónév: ", font="rubik 10 bold").place(relx=0.25, rely=0.16, anchor=CENTER)
     felhasznalonev = Entry(root, borderwidth=2)
-    felhasznalonev.place(relx=0.75, rely=0.06, anchor=CENTER)
+    felhasznalonev.place(relx=0.75, rely=0.16, anchor=CENTER)
 
-    masodik_szoveg = Label(root, text="Jelszó: ", font="rubik 10 bold").place(relx=0.25, rely=0.15, anchor=CENTER)
-    jelszo = Entry(root, borderwidth=2)
-    jelszo.place(relx=0.75, rely=0.15, anchor=CENTER)
+    masodik_szoveg = Label(root, text="Jelszó: ", font="rubik 10 bold").place(relx=0.25, rely=0.25, anchor=CENTER)
+    jelszo = Entry(root, borderwidth=2, show="*")
+    jelszo.place(relx=0.75, rely=0.25, anchor=CENTER)
 
+    def nemcsillag(event):
+        jelszo.config(show="*")
+    def csillag(event):
+        jelszo.config(show="")
+
+    showpasswd = Button(root, text="👁", fg='black', bg='#FD8B51', activebackground='#FD8B51')
+    showpasswd.bind('<ButtonPress-1>', csillag)
+    showpasswd.bind('<ButtonRelease-1>', nemcsillag)
+    showpasswd.place(relx=0.925, rely=0.21)
 
     def bekeres():
         felhasznalo_neve = felhasznalonev.get()
@@ -50,7 +60,7 @@ def belepesAblak():
             
 
 
-    bekeres_gomb = Button(root, text="Enter", command=bekeres).place(relx=0.5, rely=0.6, anchor=CENTER)
+    bekeres_gomb = Button(root, text="Enter", command=bekeres, fg='black', bg='#FD8B51').place(relx=0.5, rely=0.6, anchor=CENTER)
 
 
     root.mainloop()
