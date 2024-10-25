@@ -1,9 +1,11 @@
 #kiegeszitok beimportalasa
 from tkinter import *
 from tkinter import ttk
-import valasztas
+# import kozossegi_alkalmazas_projekt.david_valasztas as david_valasztas
 import time
 import tkinter.font as tkFont
+import david_valasztas
+import patrik_valasztas
 
 def belepesAblak():
     root = Tk()
@@ -46,10 +48,13 @@ def belepesAblak():
                 if data[0] == felhasznalo_neve and data[1] == felhasznalo_jelszava:
                     koszontes = Label(root, text="Üdvözöllek", font='rubik 12 bold')
                     koszontes.place(relx=0.5, rely=0.4, anchor=CENTER)
-                    # time.sleep(0.1)
+                    if felhasznalo_neve == "david" and felhasznalo_jelszava == "jelszo":
+                        david_valasztas.valasztasAblak()
+                    elif felhasznalo_neve == "patrik" and felhasznalo_jelszava == "jelszo":
+                        patrik_valasztas.valasztasAblak()
+                    
                     felhasznalonev.delete(0, END)
                     jelszo.delete(0, END)
-                    valasztas.valasztasAblak()
                     nincs = False
 
             
