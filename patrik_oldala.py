@@ -42,10 +42,11 @@ def fofuggveny():
             if i[0] == 420:
                 text.insert(tk.END, i[1] + "\n", "patrik")
                 text.tag_config("patrik", foreground="white", background="darkgreen", font="rubik 12 bold", justify="right", borderwidth=1, relief="solid")
+                text.yview(END)
             elif i[0] == 80:
                 text.insert(tk.END, i[1] + "\n", "david")
                 text.tag_config("david", foreground="white", background="red", font="rubik 12 bold", justify="left", borderwidth=1, relief="solid")
-            
+                text.yview(END)
     
     bekero_gomb = Button(root, text="Küldés", font="Rubik 10 bold", command=fofuggveny).place(relx=0.75, rely=0.7, anchor=CENTER)
     

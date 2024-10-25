@@ -50,11 +50,13 @@ def fofuggveny():
             if i[0] == 80:  #a felhasznalo vizsgalata
                 text.insert(tk.END, i[1] + "\n", "david")   #az uzenet beillesztese a szovegmezobe
                 text.tag_config("david", foreground="white", background="darkgreen", font="rubik 12 bold", justify="right", borderwidth=1, relief="solid")  #a kiiratas kinezetenek beallitasai
+                text.yview(END)     #az uzenetek kiiratasakor a nezopont ne ugorjon fel a lap tetejere, hanem maradjon a lap aljan az aktualis (utolso) kiiratasnal
             elif i[0] == 420:  #a felhasznalo vizsgalata
                 text.insert(tk.END, i[1] + "\n", "patrik")  #az uzenet beillesztese a szovegmezobe
                 text.tag_config("patrik", foreground="white", background="red", font="rubik 12 bold", justify="left", borderwidth=1, relief="solid")    #a kiiratas kinezetenek beallitasai
-            
+                text.yview(END)     #az uzenetek kiiratasakor a nezopont ne ugorjon fel a lap tetejere, hanem maradjon a lap aljan az aktualis (utolso) kiiratasnal
     
+
     #a fofuggvenyt lefuttato gomb letrehozasa
     bekero_gomb = Button(root, text="Küldés", font="Rubik 10 bold", command=fofuggveny).place(relx=0.75, rely=0.7, anchor=CENTER)
     
