@@ -1,6 +1,6 @@
 from tkinter import *
 import david_oldala
-import galeria
+import patrikgaleria
 import patrik_oldala
 
 def valasztasAblak():
@@ -15,7 +15,7 @@ def valasztasAblak():
         david_oldala.fofuggveny()
 
     def galeria_oldal():
-        galeria.sad()
+        patrikgaleria.sad()
 
     def patrik_oldal():
         patrik_oldala.ablak()
