@@ -2,10 +2,9 @@ from tkinter import *
 import tkinter as tk 
 from tkinter import ttk 
 from tkinter import scrolledtext 
-import time
 
 root = Tk()
-root.title("Dávid oldali chat")
+root.title("oifjdekfokdspofdksf problémaaaaaaaaaaaa")
 root.geometry("550x500")
 root.resizable(width=False, height=False)
 root.configure(bg="#257180")
@@ -16,22 +15,18 @@ text.configure(yscrollcommand=scroll.set, padx=5)
 text.place(relx=0.5, rely=0.26, anchor=CENTER)
 
 
-#szovegbeolvasas1 ------------------------------------------------
 textbox = tk.Text(root, height=4, width=30)
 scroll = tk.Scrollbar(root) 
 textbox.configure(yscrollcommand=scroll.set, borderwidth=2, relief="solid", padx=5) 
 textbox.place(relx=0.3, rely=0.7, anchor=CENTER)
-#------------------------------------------------------------------
 
 
 def fofuggveny():
     text.delete("1.0", END)
-    #szovegbeolvasas1 ------------------------------------------------
-    asd = textbox.get(1.0, "end-1c")
-    if asd != "":    
+    patrik = textbox.get(1.0, "end-1c")
+    if patrik != "":    
         with open('./messages.txt', 'a', encoding='utf-8') as irogatas:
-            print(420, asd, sep=";", file=irogatas)
-    #------------------------------------------------------------------
+            print(420, patrik, sep=";", file=irogatas)
 
     with open('./messages.txt', 'r', encoding='utf-8') as uzenetek:
         for i in uzenetek:
@@ -47,9 +42,10 @@ def fofuggveny():
                 text.insert(tk.END, i[1] + "\n", "david")
                 text.tag_config("david", foreground="white", background="red", font="rubik 12 bold", justify="left", borderwidth=1, relief="solid")
                 text.yview(END)
-    
+        
     bekero_gomb = Button(root, text="Küldés", font="Rubik 10 bold", command=fofuggveny).place(relx=0.75, rely=0.7, anchor=CENTER)
-    
+        
     root.mainloop()
+        
+# fofuggveny()
     
-fofuggveny()

@@ -4,8 +4,9 @@ from tkinter import ttk
 # import kozossegi_alkalmazas_projekt.david_valasztas as david_valasztas
 import time
 import tkinter.font as tkFont
-import david_valasztas
+import david_profil
 import patrik_valasztas
+import vendeg_valasztas
 
 def belepesAblak():
     root = Tk()
@@ -49,9 +50,12 @@ def belepesAblak():
                     koszontes = Label(root, text="Üdvözöllek", font='rubik 12 bold')
                     koszontes.place(relx=0.5, rely=0.4, anchor=CENTER)
                     if felhasznalo_neve == "david" and felhasznalo_jelszava == "jelszo":
-                        david_valasztas.valasztasAblak()
+                        david_profil.profil_d()
                     elif felhasznalo_neve == "patrik" and felhasznalo_jelszava == "jelszo":
                         patrik_valasztas.valasztasAblak()
+                    else:
+                        vendeg_valasztas.valasztasAblak()
+                        
                     
                     felhasznalonev.delete(0, END)
                     jelszo.delete(0, END)
