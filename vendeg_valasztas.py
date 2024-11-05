@@ -1,6 +1,6 @@
 from tkinter import *
 import david_profil
-import patrikgaleria
+import patrik_profil
 
 
 def valasztasAblak():
@@ -15,13 +15,11 @@ def valasztasAblak():
         david_profil.profil_d()
     
     def partik_p_megnyito():
-        pass  
+        patrik_profil.foOldal()
     
     # def galeria_david():
     #     davidgaleria.galeria_d()
 
-    def galeria_patrik():
-        patrikgaleria.galeria_p()
       
     
     megnyito_david_profil = Button(root, text="Dávid profil", bg="green", height=2, width=10, command=david_p_megnyito).place(relx=0.30, rely=0.25, anchor=CENTER)

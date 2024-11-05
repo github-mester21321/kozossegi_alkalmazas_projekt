@@ -14,6 +14,7 @@ def galeria_d():    #a fuggveny definialasa
     d_galeria_main = Toplevel() #a toplevel fuggveny azt a celt, szolgalja, hogy az ablak a megnyilasakor tudja, hogy o nem egy main ablak hanem egy masodlagol ablak, amelyet masik ablakbol nyitottak meg
     d_galeria_main.geometry("1000x600") #az ablak meretei pixelben
     d_galeria_main.title("Dávid galéria")   #az ablak neve
+    d_galeria_main.configure(bg='#257180')
 
 
     kep1 = PhotoImage(file="./davidkep/kisvakond.gif")  #a felhasznalt kepek egy valtozoban lesznek eltarolva

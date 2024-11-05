@@ -5,7 +5,7 @@ from tkinter import ttk
 import time
 import tkinter.font as tkFont
 import david_profil
-import patrik_valasztas
+import patrik_profil
 import vendeg_valasztas
 
 def belepesAblak():
@@ -52,7 +52,7 @@ def belepesAblak():
                     if felhasznalo_neve == "david" and felhasznalo_jelszava == "jelszo":
                         david_profil.profil_d()
                     elif felhasznalo_neve == "patrik" and felhasznalo_jelszava == "jelszo":
-                        patrik_valasztas.valasztasAblak()
+                        patrik_profil.foOldal()
                     else:
                         vendeg_valasztas.valasztasAblak()
                         
