@@ -1,5 +1,3 @@
 david;jelszo
 patrik;jelszo
-béla;jelszo
-kristof;jelszo
 aladin;jelszo

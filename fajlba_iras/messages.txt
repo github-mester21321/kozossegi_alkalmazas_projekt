@@ -1,0 +1,6 @@
+david;proba
+patrik;asdad
+gábor;asd
+david;kiaz
+patrik;mivan
+patrik;asd
