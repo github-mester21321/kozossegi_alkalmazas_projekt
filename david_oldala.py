@@ -75,4 +75,4 @@ def fofuggveny():
     
 
 #a fuggveny meghivasa, ami csak a fejlesztes es a teszteles alatt kell
-# fofuggveny()
+fofuggveny()

@@ -11,7 +11,7 @@ hanyadik = 1
 #a kepek valtoztatasahoz szukseges lepteto fuggveny
 def galeria_d():    #a fuggveny definialasa
     global hanyadik #a szamlalo valtozojanak localissa tetele
-    d_galeria_main = Tk() #a toplevel fuggveny azt a celt, szolgalja, hogy az ablak a megnyilasakor tudja, hogy o nem egy main ablak hanem egy masodlagol ablak, amelyet masik ablakbol nyitottak meg
+    d_galeria_main = Toplevel() #a toplevel fuggveny azt a celt, szolgalja, hogy az ablak a megnyilasakor tudja, hogy o nem egy main ablak hanem egy masodlagol ablak, amelyet masik ablakbol nyitottak meg
     d_galeria_main.geometry("700x450") #az ablak meretei pixelben
     d_galeria_main.title("Dávid galéria")   #az ablak neve
     d_galeria_main.resizable(False, False)  #az ablak atmeretezesenek letiltasa

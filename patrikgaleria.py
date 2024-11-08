@@ -63,7 +63,7 @@ def galeria_p():
     l = Label(root, image=img1)
     l.place(relx=0.3075, rely=0.1)
     szoveg = Label(root, text="And Justice For All", font=font)
-    szoveg.place(relx=0.375, rely=0.8)
+    szoveg.place(relx=0.4, rely=0.8)
 
     gomb1 = Button(root, text=">", command=elore)
     gomb1.place(relx=0.75, rely=0.5)
@@ -72,4 +72,4 @@ def galeria_p():
 
     root.mainloop()
     
-#galeria_p()
+# galeria_p()

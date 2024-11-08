@@ -29,7 +29,6 @@ def valasztasAblak_vendegeknek():   #a megnyitas miatt szukkseges fuggveny letre
     
     
     def fofuggveny():   #az uzenetek kuldeseert es fogadasaert felelos fuggveny letrehozasa
-        text.delete("1.0", END) #a szovegmezo tartalmanak torlese
         with open('./fajlba_iras/felhasznalonev.txt', 'r', encoding='utf-8') as fajl:  #az aktualis felhasznalonev beolvasasa
             for i in fajl:
                 # print("das", i.strip('\n'))
@@ -43,6 +42,7 @@ def valasztasAblak_vendegeknek():   #a megnyitas miatt szukkseges fuggveny letre
 
         with open('./fajlba_iras/vendegmessages.txt', 'r', encoding='utf-8') as uzenetek:   #a beerkezo es az elkuldott uzenetek beolvasasa a felhasznalonevekkel egyutt
             text.configure(state=NORMAL)  #a szoveg atirhatosagat bizositva a mezo szerkeszthetosegenek engedelyezese
+            text.delete("1.0", END) #a szovegmezo tartalmanak torlese
             for i in uzenetek:
                 i = i.split(';')
                 x = i[1].replace("\n", "")          

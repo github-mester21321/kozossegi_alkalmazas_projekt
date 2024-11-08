@@ -1,3 +1,5 @@
 david;jelszo
 patrik;jelszo
 aladin;jelszo
+hajra;jelszo
+proba;jelszo

@@ -1,6 +1,7 @@
 #kiegeszitok beimportalasa
 from tkinter import *
 
+
 def regisztaciosAblak():
     root = Tk()
     root.title("Regisztráció")

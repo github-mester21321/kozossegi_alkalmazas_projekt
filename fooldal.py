@@ -12,11 +12,11 @@ root.resizable(False, False)    #az oldal atmeretezhetosegenek letiltasa
 root.title("ECHO fő oldal") #az oldal cimenek beallitasa
 
 
-bg = PhotoImage(file='./kepek/fold.gif')
-my_canvas = Canvas(root, width=450, height=400)
-my_canvas.pack(fill="both", expand=True)
-my_canvas.create_image(0, 0, image=bg, anchor="nw")
-my_canvas.create_text(225, 54, text="ECHO", font="Monaco 60 bold", fill="white")
+bg = PhotoImage(file='./kepek/fold.gif')    #a bg (background) valtozoba elmentunk egy kepet
+my_canvas = Canvas(root, width=450, height=400) #letrehozzunk a canva-t
+my_canvas.pack(fill="both", expand=True)    #elhelyezzuk a canvat, amely kitolti a rendelkezesre allo helyet
+my_canvas.create_image(0, 0, image=bg, anchor="nw") #letrehozzuk a kepet az ablakban ahol az x=0 es y=0 koordinatakra helyezzuk el azt es rogzitjuk a north-west fele (bal-felso sarok)
+my_canvas.create_text(225, 54, text="ECHO", font="Monaco 60 bold", fill="white")    #letrehozzuk a szoveget, amelyet szemelyre szabunk, es amelyet feher szinure allitunk a fill hasznalatavan
 
 
 def belepesFg():    #a belepes oldalt megnyito fuggveny letrehozasa

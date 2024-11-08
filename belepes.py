@@ -6,6 +6,7 @@ import david_profil
 import patrik_profil
 import vendeg_valasztas
 
+
 def belepesAblak():
     #at ablak letrehozasa es alap beallitasai
     root = Tk()

@@ -3,31 +3,32 @@ import tkinter as tk
 from tkinter import ttk 
 from tkinter import scrolledtext 
 
+root = Toplevel()
+root.title("Patrik oldala")
+root.geometry("550x500")
+root.resizable(width=False, height=False)
+root.configure(bg="#257180")
+
+scroll = tk.Scrollbar(root) 
+text = tk.Text(root, height=15, width=65) 
+text.configure(yscrollcommand=scroll.set, padx=5) 
+text.place(relx=0.5, rely=0.26, anchor=CENTER)
+
+
+textbox = tk.Text(root, height=4, width=30)
+scroll = tk.Scrollbar(root) 
+textbox.configure(yscrollcommand=scroll.set, borderwidth=2, relief="solid", padx=5) 
+textbox.place(relx=0.3, rely=0.7, anchor=CENTER)
+
+
 def fofuggveny():
-    root = Toplevel()
-    root.title("Patrik oldali chat")
-    root.geometry("550x500")
-    root.resizable(width=False, height=False)
-    root.configure(bg="#257180")
-
-    scroll = tk.Scrollbar(root) 
-    text = tk.Text(root, height=15, width=65) 
-    text.configure(yscrollcommand=scroll.set, padx=5) 
-    text.place(relx=0.5, rely=0.26, anchor=CENTER)
-
-
-    textbox = tk.Text(root, height=4, width=30)
-    scroll = tk.Scrollbar(root) 
-    textbox.configure(yscrollcommand=scroll.set, borderwidth=2, relief="solid", padx=5) 
-    textbox.place(relx=0.3, rely=0.7, anchor=CENTER)
-
-    text.delete("1.0", END)
     patrik = textbox.get(1.0, "end-1c")
     if patrik != "":    
         with open('./fajlba_iras/messages.txt', 'a', encoding='utf-8') as irogatas:
             print("patrik", patrik, sep=";", file=irogatas)
 
     with open('./fajlba_iras/messages.txt', 'r', encoding='utf-8') as uzenetek:
+        text.delete("1.0", END)
         for i in uzenetek:
             i = i.split(';')
             x = i[1].replace("\n", "")          
